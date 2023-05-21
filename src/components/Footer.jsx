@@ -45,17 +45,7 @@ const Footer = () => {
             <li><a href="#">LinkedIn</a></li><br/>
           </ul>
         </div>
-        {/* <div className="categories">
-          <h3>Categories</h3>
-          <ul>
-            <li><a href="#">Art</a></li>
-            <li><a href="#">Science</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Cinema</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Food</a></li>
-          </ul>
-        </div> */}
+       
       </div>
     </footer>
   );

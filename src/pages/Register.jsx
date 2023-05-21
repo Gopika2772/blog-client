@@ -20,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/auth/register", inputs);
+      await axios.post("http://localhost:8080/api/auth/register", inputs);
       navigate("/login");
     } catch (err) {
       setError(err.response.data);
@@ -55,7 +55,7 @@ const Register = () => {
         <button onClick={handleSubmit}>Register</button>
         {err && <p>{JSON.stringify(err)}</p>}
         <span>
-          Do you have an account? <Link to="/login" style={{color:"black"}}>Login</Link>
+          Do you have an account? <Link to="/login" style={{ color: "black" }}>Login</Link>
         </span>
       </form>
     </div>
