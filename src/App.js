@@ -10,7 +10,6 @@ import Write from "./pages/Write";
 import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import "./style.scss"
 
 const Layout = () => {
@@ -18,7 +17,6 @@ const Layout = () => {
     <>
       <Navbar />
       <Outlet />
-      {/* <Footer /> */}
     </>
   );
 };

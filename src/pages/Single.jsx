@@ -30,7 +30,7 @@ const Single = () => {
       }
     };
     fetchData();
-    console.log(post)
+
   }, [postId]);
 
   const handleDelete = async () => {
@@ -57,24 +57,25 @@ const Single = () => {
             alt=""
           />}
           <div className="info">
-            {/* <span>{post.username}</span> */}
+            <span>{post && post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
-          {/* {currentUser.username === post.username && ( */}
-          <div className="edit">
-            <Link to={`/write?edit=2`} state={post}>
-              <img src={Edit} alt="" />
-            </Link>
-            <img onClick={handleDelete} src={Delete} alt="" />
-          </div>
-          {/* )} */}
+          {currentUser.username === post.username && (
+            <div className="edit">
+              <Link to={`/write?edit=2`} state={post}>
+                <img src={Edit} alt="" />
+              </Link>
+              <img onClick={handleDelete} src={Delete} alt="" />
+            </div>
+          )}
         </div>
         <h1>{post.title}</h1>
         <p
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(post.desc),
           }}
-        ></p>      </div>
+        ></p>
+      </div>
       <Menu cat={post.cat} />
     </div>
   );
